@@ -1,6 +1,6 @@
 // Write your JavaScript code here!
 
-const { pickPlanet, addDestinationInfo } = require("./scriptHelper");
+// const { pickPlanet, addDestinationInfo } = require("./scriptHelper");
 
 window.addEventListener("load", function() {
    
@@ -9,20 +9,20 @@ window.addEventListener("load", function() {
     form.addEventListener("submit", function(event) {
         event.preventDefault();
         //VARIABLES
-        const pilotName = document.querySelector('input[name=pilotName]');
-        const copilotName = document.querySelector('input[name=copilotName]');
-        const fuelLevel = document.querySelector('input[name=fuelLevel');
-        const cargoMass = document.querySelector('input[name=cargoMass');
+        const pilot = document.querySelector('input[name=pilotName]');
+        const copilot = document.querySelector('input[name=copilotName]');
+        const fuelLevel = document.querySelector('input[name=fuelLevel]');
+        const cargoLevel = document.querySelector('input[name=cargoMass]');
         const list = document.getElementById('faultyItems');
 
         //Add alert to notify the user that all fields are required
-             if (pilotName.value === "" || copilotName.value === "" || fuelLevel.value === "" || cargoMass.value === "") {
+             if (pilot.value === "" || copilot.value === "" || fuelLevel.value === "" || cargoLevel.value === "") {
             alert("All fields are required.");
             event.preventDefault();
             }
     
         //Use formSubmission function to validate input and update shuttle requirements
-             formSubmission(document, list, pilotName, copilotName, fuelLevel, cargoMass);
+             formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
   
         
     })
