@@ -1,6 +1,22 @@
 // Write your JavaScript code here!
 
 window.addEventListener("load", function() {
+   
+    //Add alert to notify the user that all fields are required
+    let form = document.querySelector("form");
+    form.addEventListener("submit", function(event) {
+        const pilotName = document.querySelector('input[name=pilotName]');
+        const copilotName = document.querySelector('input[name=copilotName]');
+        const fuelLevel = document.querySelector('input[name=fuelLevel');
+        const cargoMass = document.querySelector('input[name=cargoMass');
+             if (pilotName.value === "" || copilotName.value === "" || fuelLevel.value === "" || cargoMass.value === "") {
+            alert("All fields are required.");
+            event.preventDefault();
+            }
+        
+    })
+
+
 
    let listedPlanets;
    // Set listedPlanetsResponse equal to the value returned by calling myFetch()
